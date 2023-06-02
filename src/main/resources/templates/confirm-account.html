@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>connect - Bem-vindo!</title>
+
+    <style>
+      body {
+        font-family: "Helvetica", sans-serif;
+        color: #191414;
+      }
+
+      .green-color {
+        color: #1db954;
+      }
+
+      .fs-30 {
+        font-size: 30px;
+      }
+
+      .ls-5 {
+        letter-spacing: 5px;
+      }
+
+      .mb-5 {
+        margin-bottom: 5px;
+      }
+
+      .card {
+        background-color: #f0f1f5;
+        border-radius: 8px;
+        padding: 20px;
+        width: 300px;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .card-header h2 {
+        color: #00ff00;
+      }
+
+      .card-body {
+        color: #191414;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 4px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="mb-5">
+      <div>
+        <h1 class="text-center">
+          <span class="green-color">Con</span><span>nect</span>
+        </h1>
+      </div>
+    </header>
+    <section>
+      <div>
+        <p>
+          Caro(a) <span th:text="${username}"></span>, Bem-vindo(a) à nossa
+          comunidade!
+        </p>
+        <p>
+          É com grande satisfação que confirmamos a criação da sua conta.
+          Estamos animados por você se juntar a nós e começar a explorar tudo o
+          que nossa plataforma tem a oferecer.
+        </p>
+        <p>
+          Para ativar completamente sua conta, precisamos que você insira o
+          código de confirmação a seguir no app:
+        </p>
+
+        <div class="card">
+          <div class="card-body">
+            <h1 class="fs-30 ls-5" th:text="${code}"></h1>
+          </div>
+        </div>
+
+        <p>
+          Digite esse código na área designada em nosso app e voilà! Sua conta
+          estará pronta para uso. Lembramos que este código é pessoal e
+          intransferível, portanto, mantenha-o em segurança.
+        </p>
+
+        <p>
+          Além disso, gostaríamos de aproveitar esta oportunidade para oferecer
+          nosso suporte dedicado caso você tenha alguma dúvida ou precise de
+          assistência em qualquer momento. Nossa equipe de atendimento ao
+          cliente está à disposição para ajudá-lo(a) a aproveitar ao máximo
+          nossa plataforma. Seja bem-vindo(a) e aproveite ao máximo sua
+          experiência!
+        </p>
+
+        <p>Atenciosamente, Equipe Connect.</p>
+      </div>
+    </section>
+  </body>
+</html>
