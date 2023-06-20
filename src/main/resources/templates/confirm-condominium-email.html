@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>connect - Bem-vindo!</title>
+
+    <style>
+      body {
+        font-family: "Helvetica", sans-serif;
+        color: #191414;
+      }
+
+      .green-color {
+        color: #1db954;
+      }
+
+      .fs-30 {
+        font-size: 30px;
+      }
+
+      .ls-5 {
+        letter-spacing: 5px;
+      }
+
+      .mb-5 {
+        margin-bottom: 5px;
+      }
+
+      .card {
+        background-color: #f0f1f5;
+        border-radius: 8px;
+        padding: 20px;
+        width: 300px;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .card-header h2 {
+        color: #00ff00;
+      }
+
+      .card-body {
+        color: #191414;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 4px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+
+
+    </style>
+</head>
+<body>
+<header class="mb-5">
+    <div>
+        <h1 class="text-center">
+            <span class="green-color">Con</span><span>nect</span>
+        </h1>
+    </div>
+</header>
+<section>
+    <div>
+        <p>
+            Caro(a) <span th:text="${username}"></span>,
+        </p>
+        <p>
+            É com grande satisfação que confirmamos a criação de seu condomínio <b><span
+                th:text="${condominium}"></span></b>.
+        </p>
+        <p>
+            Para sua segurança e para confirmar que este e-mail de fato pertence ao seu condomínio, pedimos que confirme
+            digitando este código no app.
+        </p>
+
+        <div class="card">
+            <div class="card-body">
+                <h1 class="fs-30 ls-5" th:text="${code}"></h1>
+            </div>
+        </div>
+
+        <p>
+            Este código possui 24h de duração, e lembramos ele é pessoal e
+            intransferível, portanto, mantenha-o em segurança.
+        </p>
+
+        <p>Atenciosamente, Equipe Connect.</p>
+    </div>
+</section>
+</body>
+</html>
